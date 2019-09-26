@@ -80,7 +80,8 @@ com.ibm.rules.bai.plugin.kafka.retries=2
 ```
 
 #### Configure event emission with security.
-    To ensure that your connection to the Kafka servers is secure, add a truststore to your Kafka configuration. The following example is a configuration file with a SASL_SSL secured connection.
+
+To ensure that your connection to the Kafka servers is secure, add a truststore to your Kafka configuration. The following example is a configuration file with a SASL_SSL secured connection.
 
 ```
     com.ibm.rules.bai.plugin.topic=<kafka_topic_name>
@@ -93,9 +94,9 @@ com.ibm.rules.bai.plugin.kafka.retries=2
     com.ibm.rules.bai.plugin.kafka.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="<api_key>";
 ```
 
-    The directory /config/baiemitterconfig/ must be used as a prefix to your certificate name. For example, if your certificate file name is truststore.jks, then the property must be defined as com.ibm.rules.bai.plugin.kafka.ssl.truststore.location=/config/baiemitterconfig/trustore.jks.
+The directory /config/baiemitterconfig/ must be used as a prefix to your certificate name. For example, if your certificate file name is truststore.jks, then the property must be defined as com.ibm.rules.bai.plugin.kafka.ssl.truststore.location=/config/baiemitterconfig/trustore.jks.
 
-    For more information, see [Kafka Security documentation](https://kafka.apache.org/11/documentation.html#security) .
+For more information, see [Kafka Security documentation](https://kafka.apache.org/11/documentation.html#security) .
 
 
 
