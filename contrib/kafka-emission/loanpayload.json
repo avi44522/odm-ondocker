@@ -1,0 +1,46 @@
+{
+  "loan": {
+    "numberOfMonthlyPayments": 3,
+    "startDate": "2006-08-19T17:27:14.000+0000",
+    "amount": 30000,
+    "loanToValue": 0.05
+  },
+  "__DecisionID__": "string",
+  "borrower": {
+    "firstName": "string",
+    "lastName": "string",
+    "birth": "2008-09-29T01:49:45.000+0000",
+    "SSN": {
+      "areaNumber": "123",
+      "groupCode": "12",
+      "serialNumber": "1234"
+    },
+    "yearlyIncome": 3,
+    "zipCode": "94260",
+    "creditScore": 3,
+    "spouse": {
+      "firstName": null,
+      "lastName": null,
+      "birth": "2019-01-11T15:43:47.300+0000",
+      "SSN": {
+        "areaNumber": "",
+        "groupCode": "",
+        "serialNumber": ""
+      },
+      "yearlyIncome": 0,
+      "zipCode": null,
+      "creditScore": 0,
+      "spouse": null,
+      "latestBankruptcy": {
+        "date": null,
+        "chapter": 0,
+        "reason": null
+      }
+    },
+    "latestBankruptcy": {
+      "date": "2014-09-18T23:18:33.000+0000",
+      "chapter": 3,
+      "reason": "string"
+    }
+  }
+}

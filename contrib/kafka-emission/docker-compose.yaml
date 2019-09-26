@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  odm:
+    image: ibmcom/odm:8.10.2
+    ports:
+      - '9060:9060'
+    environment:
+      - LICENSE=accept
+      - SAMPLE=true
+    volumes:
+      - ./plugin-configuration.properties:/config/baiemitterconfig/plugin-configuration.properties
