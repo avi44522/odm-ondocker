@@ -50,16 +50,16 @@ Starting the Kafka servers:
 
 
 ## Configure your Kafka Topics for ODM
-### Edit the [contrib/kafka-emission/plugin.properties] file.
+### Edit the [contrib/kafka-emission/plugin.properties](contrib/kafka-emission/plugin.properties) file.
 
   This file must contain the name of the Kafka topic and at least one Kafka bootstrap server.
 
->```
-com.ibm.rules.bai.plugin.topic=<kafka_topic_name>
-com.ibm.rules.bai.plugin.kafka.bootstrap.servers=<kafka_IP>:<kafka_port>
+```
+com.ibm.rules.bai.plugin.topic=<kafka_topic_name>                       
+com.ibm.rules.bai.plugin.kafka.bootstrap.servers=<KAFKASERVER>:9092
 ```
 
-  Where topic defines the name of the Kafka topic and bootstrap.servers defines the Kafka target servers.
+Where topic defines the name of the Kafka topic and bootstrap.servers defines the Kafka target servers.
 
 All properties must be prefixed with **com.ibm.rules.bai.plugin**.
 
@@ -71,16 +71,18 @@ The connection to Kafka can be configured with or without security.
 
 ####    Configure event emission without security.
 
-    The following example is a configuration file with a Kafka producer property named retries. The property causes the client to resend any record that fails with a potentially transient error. However, the connection is not secured.
->```
-    com.ibm.rules.bai.plugin.topic=<kafka_topic_name>                       
-    com.ibm.rules.bai.plugin.kafka.bootstrap.servers=<KAFKASERVER>:9092
-    com.ibm.rules.bai.plugin.kafka.retries=2
+The following example is a configuration file with a Kafka producer property named retries. The property causes the client to resend any record that fails with a potentially transient error. However, the connection is not secured.
+    
+```
+com.ibm.rules.bai.plugin.topic=<kafka_topic_name>                       
+com.ibm.rules.bai.plugin.kafka.bootstrap.servers=<KAFKASERVER>:9092
+com.ibm.rules.bai.plugin.kafka.retries=2
 ```
 
 #### Configure event emission with security.
     To ensure that your connection to the Kafka servers is secure, add a truststore to your Kafka configuration. The following example is a configuration file with a SASL_SSL secured connection.
->```
+
+```
     com.ibm.rules.bai.plugin.topic=<kafka_topic_name>
     com.ibm.rules.bai.plugin.kafka.bootstrap.servers=<KAFKASERVER>:9092
     com.ibm.rules.bai.plugin.kafka.security.protocol=SASL_SSL
@@ -112,7 +114,7 @@ The decision service is an ODM Docker image, which executes the payload against 
 
 `$ ./deployRuleapp.sh`
 
->  ```
+```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <result>
     <resource xsi:type="deploymentReport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -148,13 +150,13 @@ The decision service is an ODM Docker image, which executes the payload against 
     </resource>
     <succeeded>true</succeeded>
 </result>
-  ```
+```
 
 2. Execute the decision service command:
 
   `$ executeDecision.sh`
 
-> ```
+```
  Execution seems correct.
 ```
 
