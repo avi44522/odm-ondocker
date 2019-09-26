@@ -41,6 +41,8 @@ The following diagram describes the workflow:
 * Clone the project repository from github:
 
   ```$ git clone https://github.com/ODMDev/odm-ondocker.git```
+  
+  ```$ cd odm-ondocker/contrib/kafka-emission```
 
 ## Starting Kafka infrastructure
 
@@ -104,6 +106,8 @@ For more information, see [Kafka Security documentation](https://kafka.apache.or
 Use the following command to start the ODM docker image with the Kafka emission enabled :
 
 `$ docker-compose up`
+
+| You can also use the kubernetes implementation. To do that use the latest [ODM helm charts](https://github.com/IBM/charts/tree/master/stable/ibm-odm-dev) with this [documentation](https://www.ibm.com/support/knowledgecenter/en/SSYHZ8_19.0.x/com.ibm.dba.install/k8s_topics/tsk_custom_emitters.html).
 
 ## Running the scenarios
 
